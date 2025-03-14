@@ -16,7 +16,7 @@ class AbstractRefreshToken(models.Model):
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
-        related_name="refresh_tokens",
+        related_name="graphql_jwt_refresh_tokens",
         verbose_name=_("user"),
     )
     token = models.CharField(_("token"), max_length=255, editable=False)
